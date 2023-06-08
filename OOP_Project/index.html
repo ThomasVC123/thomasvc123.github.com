@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<script src="Page1/js/script.js"></script>
+	<link rel="stylesheet" href="Page1/style/style.css"/>
+</head>
+<body>
+	<div class="login-form">
+		<h1>welcome to</h1>
+		<h2>super leuke taakjes.be</h2>
+		<h3>Login</h3>
+		<form onsubmit="login(); return false;">
+			<label for="username">Username</label>
+			<input type="text" id="username" name="username" required>
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" required>
+			<input type="submit" value="Login">
+		</form>
+		<p id="message"></p>
+	</div>
+	<div class="loader"></div> 
+</body>
+</html>

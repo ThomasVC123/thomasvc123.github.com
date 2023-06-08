@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin</title>
+        <link rel="stylesheet" href="Page2/style/style.css"/>
+        <script src="Page2/js/script.js"></script>
+    </head>
+    <body>
+        <h1>Welcome admin</h1>
+        <div class="task-form">
+            <h2>Add Task</h2>
+            <form onsubmit="addTask(); return false;">
+              <label for="task">Task Description:</label>
+              <input type="text" id="task" name="task" required />
+              <input type="submit" value="Add Task" />
+            </form>
+            <p id="message"></p>
+        </div>
+
+        <div>
+            <h2>Tasks</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task Number</th>
+                        <th>Task</th>
+                        <th>Status</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="taskTableBody">
+                </tbody>
+            </table>
+        </div>
+<script>           
+    let tasks = [];
+    if (localStorage.getItem('tasks')) {
+        tasks = JSON.parse(localStorage.getItem('tasks'));
+    }
+
+    const taskTableBody = document.getElementById('taskTableBody');
+    tasks.forEach(task => {
+        const row = taskTableBody.insertRow();
+        const idCell = row.insertCell(0);
+        const descriptionCell = row.insertCell(1);
+        const statusCell = row.insertCell(2);
+        const actionCell = row.insertCell(3);
+
+        idCell.innerHTML = task.id;
+        descriptionCell.innerHTML = task.description;
+        statusCell.innerHTML = task.done ? 'Done' : 'Not done';
+
+        const deleteButton = document.createElement('button');
+        deleteButton.innerHTML = 'Delete';
+        deleteButton.addEventListener('click', () => {
+            deleteTask(task.id);
+            row.remove();
+        });
+        actionCell.appendChild(deleteButton);
+    });
+    </script>
+
+                <button class="button" onclick="goToLoginScreen()">Go back to login screen</button>
+
+    </body>
+</html>

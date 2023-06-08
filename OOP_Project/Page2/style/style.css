@@ -1,0 +1,152 @@
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+h2{
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #3498db; 
+}
+.task-form {
+    width: 500px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 100px;
+
+    }
+    
+    .task-form h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    }
+    
+    label {
+    display: block;
+    margin-bottom: 8px;
+    }
+    
+    input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    }
+    
+    input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+    background-color: #3498db;
+    }
+    
+    #message {
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(255, 0, 0);
+    }
+    .button {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #3498db;
+        color: #ffffff;
+        text-align: center;
+        font-size: 18px;
+        padding: 12px 24px;
+        transition: all 0.2s;
+        cursor: pointer;
+        margin: 10px;
+        border: none;
+        margin-left: 44%;
+        margin-right: 44%;
+
+      }
+      
+      .button:hover {
+        background-color: #112b6c;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        font-family: Arial, sans-serif;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      
+      table th, table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      
+      table th {
+        background-color: #3498db;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      
+      table tr:hover {
+        background-color: #f5f5f5;
+      }
+      
+      table tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      
+      @media screen and (max-width: 600px) {
+        table {
+          overflow-x: auto;
+          display: block;
+        }
+        
+        table tr {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          padding: 20px 0;
+          border-bottom: none;
+        }
+      
+        table td {
+          flex-basis: 100%;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+      
+        table td:before {
+          font-weight: bold;
+          margin-right: 10px;
+          display: inline-block;
+        }
+        
+        table td:nth-of-type(1):before {
+          content: "Task Name:";
+        }
+        
+        table td:nth-of-type(2):before {
+          content: "Due Date:";
+        }
+        
+        table td:nth-of-type(3):before {
+          content: "Priority:";
+        }
+        
+        table td:nth-of-type(4):before {
+          content: "Actions:";
+        }
+      }
+      
